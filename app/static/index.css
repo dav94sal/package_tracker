@@ -1,4 +1,21 @@
-.package{
+/* form {
+
+} */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 60px;
+    width: 100%;
+}
+
+/* .session-but {
+
+} */
+
+.package {
     display: flex;
     flex-wrap: wrap;
 }
