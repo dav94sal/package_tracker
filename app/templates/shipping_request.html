@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        {{ form.csrf_token() }}
+
+        <div>
+            {{ form.recipient.label }}
+            {{ form.recipient() }}
+        </div>
+        <div>
+            {{ form.origin.label }}
+            {{ form.origin() }}
+        </div>
+        <div>
+            {{ form.destination.label }}
+            {{ form.destination() }}
+        </div>
+        <div>
+            {{ form.express_shipping.label }}
+            {{ form.express_shipping() }}
+        </div>
+
+        <div>
+            {{ form.submit }}
+            <a href="/">Cancel</a>
+        </div>
+    </form>
+
+{% endblock %}

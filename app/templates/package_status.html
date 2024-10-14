@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h1>Package Tracker</h1>
+
+    {% for package in packages %}
+        <div class="package">
+            <p>Package Id: {{ package.id }} |</p>
+            <p>Sender: {{ package.sender }} |</p>
+            <p>Recipient: {{ package.recipient }} |</p>
+            <p>Origin: {{ package.origin }} | </p>
+            <p>Destination: {{ package.destination }} |</p>
+            <p>Location: {{ package.location }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

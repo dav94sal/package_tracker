@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css' )}}">
+    <title>Package Tracker</title>
+</head>
+<body>
+    <nav>
+        <a href="/new_package">New Package</a>
+
+        {% if not current_user.is_anonymous %}
+            <form method="post" action="{{ url_for('session.logout') }}">
+                <button>Logout</button>
+            </form>
+        {% else %}
+            <a href="/session">Login</a>
+            <a href="/session/signup">Signup</a>
+        {% endif %}
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
